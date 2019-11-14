@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterComponent } from './counter/counter.component';
 import { CounterService } from './counter.service';
 import { AuthService } from './auth.service';
 
@@ -8,15 +9,12 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private auth: AuthService, private counterService: CounterService){};
-  title = 'counters';
 
-  reset(){
-    this.counterService.reset();
-  }
-  
+  constructor(private auth: AuthService) {}
+
   ngOnInit() {
     this.auth.localAuthSetup();
-    this.auth.handleAuthCallback();}
+    this.auth.handleAuthCallback();
+  }
 
 }

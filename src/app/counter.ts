@@ -1,5 +1,9 @@
 export class Counter {
-    id : number;
-    name : string;
-    value : number;
-}
+    id: number;
+    name: string;
+    value: number;
+    url: string;
+  
+    constructor() {
+    }
+  }
